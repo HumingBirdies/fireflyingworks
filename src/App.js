@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Routes, Route, Switch, BrowserRouter as Router } from "react-router-dom";  
+import Typography from "@material-ui/core/Typography";
+import { NavBar } from './components/common/NavBar/NavBar';
+import AboutMePage from './pages/AboutMePage/AboutMePage';
+import ArtworkPage from './pages/ArtworkPage/ArtworkPage';
+import HomePage from './pages/HomePage/HomePage';
+import { Footer } from './components/common/Footer/Footer';
+import { Background } from './components/common/Background/Background';
+
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Router>
+        <NavBar/> 
+
+        <Routes>
+          <Route path="/"  element={<HomePage/>}/>
+          <Route path="/about"  element={<AboutMePage/>}/>
+          <Route path="/artwork"  element={<ArtworkPage/>}/>
+        </Routes>
+
+       
+      </Router>
+      <Footer/>
+    </>
   );
 }
 
 export default App;
+
