@@ -15,7 +15,7 @@ function HomePage() {
 
     return (
     <div className="HomePage">
-            <p className="title">fireflying 1</p>
+            <p className="title">fireflying 2221</p>
             <div className="eyeball-container"><CustomIcon iconName="eyeball" size="xxl"/></div>
             <div className="content-container">
                 <p className="content">
